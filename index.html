@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Day by Day</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <header class="page-title">
+                <h1>day by day</h1>
+                <p>A personal plan, not a productivity race.</p>
+            </header>
+
+            <section class="calendar" aria-label="Weekly calendar">
+                <div class="calendar-title">
+                    <button class="calendar-btn" id="previous-week" aria-label="Previous week">&#8249;</button>
+                    <h2 id="month-year"></h2>
+                    <button class="calendar-btn" id="next-week" aria-label="Next week">&#8250;</button>
+                </div>
+                <div class="days" id="calendar-days"></div>
+            </section>
+
+            <section class="planner">
+                <div class="tasks-section">
+                    <div class="selected-day-title">
+                        <p id="selected-day"></p>
+                        <button id="today-btn">Today</button>
+                    </div>
+                    <div class="task-filters" aria-label="Task filters">
+                        <button class="filter-btn active" type="button" data-filter="all">All</button>
+                        <button class="filter-btn" type="button" data-filter="pending">Pending</button>
+                        <button class="filter-btn" type="button" data-filter="completed">Completed</button>
+                    </div>
+                    <ul id="task-list"></ul>
+                    <div class="empty-message" id="empty-message">
+                        <p>No tasks planned for this day.</p>
+                        <span>Add a quiet little plan when you are ready.</span>
+                    </div>
+                </div>
+
+                <form class="quick-add" id="task-form">
+                    <h2>QUICK ADD</h2>
+                    <input type="text" id="input-task" placeholder="New task..." autocomplete="off">
+                    <div class="date-time-row">
+                        <div>
+                            <label for="task-date">Pick a date</label>
+                            <input type="date" id="task-date">
+                        </div>
+                        <div>
+                            <label for="task-time">Pick a time</label>
+                            <input type="time" id="task-time">
+                        </div>
+                    </div>
+                    <button type="submit" class="save-btn">SAVE</button>
+                    <p class="form-message" id="form-message" aria-live="polite"></p>
+                </form>
+            </section>
+
+            
+        </div>
+    </main>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
